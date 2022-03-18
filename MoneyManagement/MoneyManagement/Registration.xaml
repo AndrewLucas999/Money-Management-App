@@ -1,0 +1,30 @@
+﻿<Window x:Class="MoneyManagement.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:MoneyManagement"
+        mc:Ignorable="d"
+        Title="Registration" Height="450" Width="800">
+    <Grid Height="450" Width="800" Background="#e9f5f9">
+            <TextBlock Margin="10,5,0,0" Height="23" HorizontalAlignment="Left" VerticalAlignment="Top" Name="TextBlockHeading" Text="Registration"></TextBlock>
+            <Grid Height="300" Width="600" Background="Bisque">
+                 
+            
+                <TextBlock Height="20" HorizontalAlignment="Left" Margin="67,0,0,0" x:Name ="Errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />  
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,20,0,0" Name="TextBlockFirstname" Text="First Name:" VerticalAlignment="Top" Width="110" />  
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,50,0,0" Name="TextBlockLastName" Text="Last Name:" VerticalAlignment="Top" Width="110" />  
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,80,0,0" Name="TextBlockEmailId" Text="Email: " VerticalAlignment="Top" Width="110" />  
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,107,0,0" Name="TextBlockPassword" Text="Password: " VerticalAlignment="Top" Width="110"  />  
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,136,0,0" Name="TextBlockConfirmPwd" Text="ConfirmPassword: " VerticalAlignment="Top" Width="110" Grid.RowSpan="2" />  
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="183,20,0,0" Name="TextBoxFirstName" VerticalAlignment="Top" Width="222" />  
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="183,50,0,0" Name="TextBoxLastName" VerticalAlignment="Top" Width="222" />  
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="183,80,0,0" Name="TextBoxEmail" VerticalAlignment="Top" Width="222" />  
+                
+                <PasswordBox Height="23" HorizontalAlignment="Left" Margin="183,107,0,0" Name="PasswordBox1" VerticalAlignment="Top" Width="222" />  
+                <PasswordBox Height="23" HorizontalAlignment="Left" Margin="183,136,0,0" Name="PasswordBoxConfirm" VerticalAlignment="Top" Width="222" />  
+                <Button Content = "Submit" Height="32" HorizontalAlignment="Center" Margin="0,80,0,0" Width="100" Click="Submit_OnClick"/>
+            </Grid>
+        </Grid>
+   
+</Window>
