@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MoneyManagement"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Financial Money Manager" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key = "LabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#F7FCFF"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        
+    </Window.Resources>
+    
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <!-- BANNER -->
+        <DockPanel Grid.Row="0" Grid.ColumnSpan="3" Dock="Top" Background="#769BFF"/>
+        <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle}">FMA</Label>    
+        <Label></Label>
+        
+        
+        
+        
     </Grid>
 </Window>
