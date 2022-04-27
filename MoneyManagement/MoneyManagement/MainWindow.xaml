@@ -25,7 +25,7 @@
         <Style x:Key = "LabelStyle" TargetType="Label">
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Foreground" Value="#00F5FF"/>
+            <Setter Property="Foreground" Value="#63AEFF"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             
@@ -41,6 +41,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -50,22 +51,44 @@
         
         <!-- BANNER -->
         <!-- <Border Grid.Row="0" Grid.ColumnSpan="3" Style="{StaticResource BorderStyle}"></Border> -->
-        <DockPanel Grid.Row="0" Grid.ColumnSpan="4" Grid.Column="0" Dock="Top" Background="#769BFF" />    
-        <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelHeaderStyle}">FMA</Label>    
+        <!-- <MenuItem Header="File"></MenuItem> -->
+        <Menu Grid.ColumnSpan="4" DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <Separator/>
+                <MenuItem Header="_Exit"/>   
+            </MenuItem>
+        </Menu>
+        <DockPanel Grid.Row="1" Grid.ColumnSpan="4" Grid.Column="0" Dock="Top" Background="#769BFF" />    
+        <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelHeaderStyle}">FMA</Label>    
         <!-- TOP LEFT -->
-        <Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}">
+        <Border Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}">
             <StackPanel VerticalAlignment="Center">
-                <Label Style="{StaticResource LabelStyle}" Content="Balance After Bills: " Target="{Binding ElementName = BalanceAfterBill}"/>
-                <Label Style = "{StaticResource LabelStyle}" Name="BalanceAfterBill" Content = "123"/>
+                <Label Style="{StaticResource LabelStyle}" Content="Balance: " Target="{Binding ElementName = Balance}"/>
+                <Label Style = "{StaticResource LabelStyle}" Name="Balance" Content = "123"/>
             </StackPanel>
         </Border>
         <!-- Top RIGHT -->
-        <Border Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}">
+        <Border Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}">
             <StackPanel VerticalAlignment="Center">
-                <Label Style="{StaticResource LabelStyle}" Content="Money to spend on wants" Target="{Binding ElementName = MoneyOnWants}"></Label>
-                <Label Style = "{StaticResource LabelStyle}" Name="MoneyOnWants" Content = "123"/>
+                <Label Style="{StaticResource LabelStyle}" Content="Money Allowance" Target="{Binding ElementName = MoneyAllowance}"></Label>
+                <Label Style = "{StaticResource LabelStyle}" Name="MoneyAllowance" Content = "123"/>
             </StackPanel>
         </Border>
+        <!-- Bottom Left -->
+        <Border Grid.Column="0" Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}">
+            <StackPanel VerticalAlignment="Center">
+                <Label Style="{StaticResource LabelStyle}" Content="Credit Balance" Target="{Binding ElementName = CreditBalance}"></Label>
+                <Label Style = "{StaticResource LabelStyle}" Name="CreditBalance" Content = "123"/>
+            </StackPanel>
+        </Border>
+        <!-- Bottom Right -->
+        <Border Grid.Column="2" Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}">
+            <StackPanel VerticalAlignment="Center">
+                <Label Style="{StaticResource LabelStyle}" Content="Binding Path Current Spend Day" Target="{Binding ElementName = CurrenDaySpent}"></Label>
+                <Label Style = "{StaticResource LabelStyle}" Name="CurrenDaySpent" Content = "123"/>
+            </StackPanel>
+        </Border>
+        
         
         
     </Grid>
