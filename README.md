@@ -1,2 +1,2 @@
-# Money-Management-App
-Personal Project to create money management
+# Money Management App
+Personal Project to create money management app
