@@ -58,13 +58,14 @@
                 <MenuItem Header="_Exit"/>   
             </MenuItem>
         </Menu>
-        <DockPanel Grid.Row="1" Grid.ColumnSpan="4" Grid.Column="0" Dock="Top" Background="#769BFF" />    
+        <DockPanel Grid.Row="1" Grid.ColumnSpan="4" Grid.Column="0" Dock="Top" Background="#BC9EFF" />    
         <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelHeaderStyle}">FMA</Label>    
         <!-- TOP LEFT -->
         <Border Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}">
             <StackPanel VerticalAlignment="Center">
                 <Label Style="{StaticResource LabelStyle}" Content="Balance: " Target="{Binding ElementName = Balance}"/>
                 <Label Style = "{StaticResource LabelStyle}" Name="Balance" Content = "123"/>
+                
             </StackPanel>
         </Border>
         <!-- Top RIGHT -->
@@ -86,6 +87,7 @@
             <StackPanel VerticalAlignment="Center">
                 <Label Style="{StaticResource LabelStyle}" Content="Binding Path Current Spend Day" Target="{Binding ElementName = CurrenDaySpent}"></Label>
                 <Label Style = "{StaticResource LabelStyle}" Name="CurrenDaySpent" Content = "123"/>
+                <Button Content="Update Total Spent for Today"></Button>
             </StackPanel>
         </Border>
         
