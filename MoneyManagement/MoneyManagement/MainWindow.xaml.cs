@@ -24,5 +24,10 @@ namespace MoneyManagement
         {
             InitializeComponent();
         }
+
+        private void EnterBalance_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

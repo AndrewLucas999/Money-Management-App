@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MoneyManagement"
+        xmlns:uc="clr-namespace:MoneyManagement.UC"
         mc:Ignorable="d"
         Title="Financial Money Manager" Height="600" Width="1000">
     <Window.Resources>
@@ -15,25 +16,6 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
-        <Style x:Key="BorderStyle" TargetType="Border">
-            <Setter Property="CornerRadius" Value="16"/>
-            <Setter Property="BorderBrush" Value="#C2C4CD"/>
-            <Setter Property="BorderThickness" Value="10"/>
-            <Setter Property="Margin" Value="10"/>
-            <!-- <Setter Property="Background"/> -->
-        </Style>
-        <Style x:Key = "LabelStyle" TargetType="Label">
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Foreground" Value="#63AEFF"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-        </Style>
-        <Style x:Key="ButtonStyle" TargetType="Button">
-            <Setter Property="Width" Value="200"/>
-            <Setter Property="Height" Value="30"/>
-        </Style>
-        
     </Window.Resources>
     
     <Grid>
@@ -57,44 +39,21 @@
         <!-- <MenuItem Header="File"></MenuItem> -->
         <Menu Grid.ColumnSpan="4" DockPanel.Dock="Top">
             <MenuItem Header="_File">
+                <MenuItem Header="_Enter Balance to refresh" Click="EnterBalance_OnClick"/>  
                 <Separator/>
                 <MenuItem Header="_Exit"/>   
+                 
             </MenuItem>
         </Menu>
         <DockPanel Grid.Row="1" Grid.ColumnSpan="4" Grid.Column="0" Dock="Top" Background="#BC9EFF" />    
         <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelHeaderStyle}">FMA</Label>    
         <!-- TOP LEFT -->
-        <Border Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}">
-            <StackPanel VerticalAlignment="Center">
-                <Label Style="{StaticResource LabelStyle}" Content="Balance: " Target="{Binding ElementName = Balance}"/>
-                <Label Style = "{StaticResource LabelStyle}" Name="Balance" Content = "123"/>
-                
-            </StackPanel>
-        </Border>
+        <uc:BalanceUc Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" />
         <!-- Top RIGHT -->
-        <Border Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}">
-            <StackPanel VerticalAlignment="Center">
-                <Label Style="{StaticResource LabelStyle}" Content="Money Allowance" Target="{Binding ElementName = MoneyAllowance}"></Label>
-                <Label Style = "{StaticResource LabelStyle}" Name="MoneyAllowance" Content = "123"/>
-            </StackPanel>
-        </Border>
+        <uc:MoneyAllowanceUc Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" />
         <!-- Bottom Left -->
-        <Border Grid.Column="0" Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}">
-            <StackPanel VerticalAlignment="Center">
-                <Label Style="{StaticResource LabelStyle}" Content="Credit Balance" Target="{Binding ElementName = CreditBalance}"></Label>
-                <Label Style = "{StaticResource LabelStyle}" Name="CreditBalance" Content = "123"/>
-            </StackPanel>
-        </Border>
+        <uc:CreditBalanceUc Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <!-- Bottom Right -->
-        <Border Grid.Column="2" Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}">
-            <StackPanel VerticalAlignment="Center">
-                <Label Style="{StaticResource LabelStyle}" Content="Binding Path Current Spend Day" Target="{Binding ElementName = CurrenDaySpent}"></Label>
-                <Label Style = "{StaticResource LabelStyle}" Name="CurrenDaySpent" Content = "123"/>
-                <Button Style="{StaticResource ButtonStyle}" Content="Update Total Spent for Today"></Button>
-            </StackPanel>
-        </Border>
-        
-        
-        
+        <uc:DaySpendingUc Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
     </Grid>
 </Window>
