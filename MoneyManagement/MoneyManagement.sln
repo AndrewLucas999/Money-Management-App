@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyManagement", "MoneyManagement\MoneyManagement.csproj", "{83A64A1A-FC17-4D8F-8639-43944EDC3D3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternalLibrary", "InternalLibrary\InternalLibrary.csproj", "{DD12E991-3C52-4564-B88F-E4D29B15FB4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternalLibraryTest", "InternalLibraryTest\InternalLibraryTest.csproj", "{67F08068-F605-4377-A520-AF99D9C842CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{83A64A1A-FC17-4D8F-8639-43944EDC3D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83A64A1A-FC17-4D8F-8639-43944EDC3D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83A64A1A-FC17-4D8F-8639-43944EDC3D3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD12E991-3C52-4564-B88F-E4D29B15FB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD12E991-3C52-4564-B88F-E4D29B15FB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD12E991-3C52-4564-B88F-E4D29B15FB4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD12E991-3C52-4564-B88F-E4D29B15FB4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67F08068-F605-4377-A520-AF99D9C842CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67F08068-F605-4377-A520-AF99D9C842CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67F08068-F605-4377-A520-AF99D9C842CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67F08068-F605-4377-A520-AF99D9C842CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
