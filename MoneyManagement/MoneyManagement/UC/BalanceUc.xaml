@@ -21,13 +21,17 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Width"/>    
+        </Style>
     </UserControl.Resources>
     <Grid>
         <Border Style="{StaticResource BorderStyle}">
             <StackPanel VerticalAlignment="Center">
                 <Label Style="{StaticResource LabelStyle}" Content="Balance: " Target="{Binding ElementName = Balance}"/>
                 <Label Style = "{StaticResource LabelStyle}" Name="Balance" Content = "123"/>
-                
+                <TextBox/>
+                <Button Style = "{StaticResource ButtonStyle}" Content="Update"></Button>
             </StackPanel>
         </Border>
     </Grid>
