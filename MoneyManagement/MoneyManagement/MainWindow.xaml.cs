@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using InternalLibrary.View_Model;
 
 namespace MoneyManagement
 {
@@ -20,9 +21,11 @@ namespace MoneyManagement
     /// </summary>
     public partial class MainWindow : Window
     {
+        public WindowViewModel Model { get; } = new();
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = Model;
         }
 
         private void EnterBalance_OnClick(object sender, RoutedEventArgs e)
