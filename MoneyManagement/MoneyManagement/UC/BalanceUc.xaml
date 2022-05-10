@@ -4,8 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:MoneyManagement.UC"
+             xmlns:viewModel="clr-namespace:InternalLibrary.View_Model;assembly=InternalLibrary"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance viewModel:WindowViewModel, Type=viewModel:WindowViewModel}">
     <UserControl.Resources>
         <Style x:Key="BorderStyle" TargetType="Border">
             <Setter Property="CornerRadius" Value="16"/>
@@ -22,16 +24,15 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
         <Style x:Key="ButtonStyle" TargetType="Button">
-            <Setter Property="Width"/>    
+            <Setter Property="Width" Value="100"/>    
         </Style>
     </UserControl.Resources>
     <Grid>
         <Border Style="{StaticResource BorderStyle}">
             <StackPanel VerticalAlignment="Center">
-                <Label Style="{StaticResource LabelStyle}" Content="Balance: " Target="{Binding ElementName = Balance}"/>
-                <Label Style = "{StaticResource LabelStyle}" Name="Balance" Content = "123"/>
-                <TextBox/>
-                <Button Style = "{StaticResource ButtonStyle}" Content="Update"></Button>
+                <Label Style="{StaticResource LabelStyle}" Content="Balance: "/>
+                <Label Style = "{StaticResource LabelStyle}" Content = "{Binding MathsViewModel.Maths.Balance}"/>
+                <Button Style = "{StaticResource ButtonStyle}" Content="Update"/>
             </StackPanel>
         </Border>
     </Grid>

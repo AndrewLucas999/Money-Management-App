@@ -4,14 +4,7 @@ namespace InternalLibrary.View_Model;
 
 public class WindowViewModel
 {
-    public WindowViewModel()
-    {
-        
-    }
-    public void Initalise()
-    {
-        
-    }
+    public MathsViewModel MathsViewModel { get; set; } = new();
 
     public void ImportAndGenerateMoneyConfig()
     {
