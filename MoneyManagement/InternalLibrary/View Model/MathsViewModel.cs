@@ -2,6 +2,6 @@
 
 public class MathsViewModel
 {
-    public Maths Maths { get; set; }
-   
+    public Maths Maths { get; set; } = new Maths();
+
 }
