@@ -1,6 +1,4 @@
-﻿using InternalLibrary.Config;
-
-namespace InternalLibrary.View_Model;
+﻿namespace InternalLibrary.View_Model;
 
 public class WindowViewModel
 {

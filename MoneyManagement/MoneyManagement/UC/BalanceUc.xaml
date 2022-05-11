@@ -31,7 +31,7 @@
         <Border Style="{StaticResource BorderStyle}">
             <StackPanel VerticalAlignment="Center">
                 <Label Style="{StaticResource LabelStyle}" Content="Balance: "/>
-                <Label Style = "{StaticResource LabelStyle}" Content = "{Binding MathsViewModel.Maths.Balance}"/>
+                <Label Style = "{StaticResource LabelStyle}" Content = "{Binding MathsViewModel.Cash}"/>
                 <Button Style = "{StaticResource ButtonStyle}" Content="Update"/>
             </StackPanel>
         </Border>

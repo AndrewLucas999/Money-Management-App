@@ -4,8 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:MoneyManagement.UC"
+             xmlns:viewModel="clr-namespace:InternalLibrary.View_Model;assembly=InternalLibrary"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance viewModel:WindowViewModel, Type=viewModel:WindowViewModel}">
     <UserControl.Resources>
         <Style x:Key="BorderStyle" TargetType="Border">
             <Setter Property="CornerRadius" Value="16"/>
@@ -25,8 +27,8 @@
     <Grid>
         <Border Style="{StaticResource BorderStyle}">
             <StackPanel VerticalAlignment="Center">
-                <Label Style="{StaticResource LabelStyle}" Content="Money Allowance" Target="{Binding ElementName = MoneyAllowance}"></Label>
-                <Label Style = "{StaticResource LabelStyle}" Name="MoneyAllowance" Content = "123"/>
+                <Label Style="{StaticResource LabelStyle}" Content="Money Allowance" />
+                <Label Style = "{StaticResource LabelStyle}" Content = "{Binding Path = MathsViewModel.AmountToSave}"/>
             </StackPanel>
         </Border>
     </Grid>
