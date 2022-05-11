@@ -16,6 +16,32 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
+        <Style x:Key="ButtonHeaderStyle" TargetType="Button">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="#BC9EFE"/>
+            <Setter Property="BorderBrush" Value="#BC9EFE"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#F7FCFF"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#B897E6"/>
+                    <Setter Property="BorderBrush" Value="#B897E6"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
     
     <Grid>
@@ -45,8 +71,10 @@
                  
             </MenuItem>
         </Menu>
-        <DockPanel Grid.Row="1" Grid.ColumnSpan="4" Grid.Column="0" Dock="Top" Background="#BC9EFF" />    
-        <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelHeaderStyle}">FMA</Label>    
+        
+        <DockPanel Grid.Row="1" Grid.ColumnSpan="4" Grid.Column="0" Dock="Top" Background="#BC9EFF"/>    
+        <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelHeaderStyle}" Content="FMA"/>   
+        <Button Grid.Row="1" Grid.Column="2" Style="{StaticResource ButtonHeaderStyle}" Content="Update Day Spending"/>
         <!-- TOP LEFT -->
         <uc:BalanceUc Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" />
         <!-- Top RIGHT -->
