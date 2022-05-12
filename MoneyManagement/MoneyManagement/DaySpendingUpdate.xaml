@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="DaySpendingUpdate" Height="300" Width="200">
     <Grid>
-        
-    </Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" Grid.Column="0" Dock="Top" Background="#BC9EFF"/>    
+    </Grid> 
 </Window>
