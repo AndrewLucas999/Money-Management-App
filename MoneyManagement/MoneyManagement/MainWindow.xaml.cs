@@ -32,5 +32,11 @@ namespace MoneyManagement
         {
             throw new NotImplementedException();
         }
+
+        private void OpenDaySpendingUpdateWindow_OnClick(object sender, RoutedEventArgs e)
+        {
+            DaySpendingUpdate daySpendWindow = new DaySpendingUpdate();
+            daySpendWindow.Show();
+        }
     }
 }
