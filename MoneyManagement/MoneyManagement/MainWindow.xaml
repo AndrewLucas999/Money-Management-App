@@ -74,7 +74,7 @@
         
         <DockPanel Grid.Row="1" Grid.ColumnSpan="4" Grid.Column="0" Dock="Top" Background="#BC9EFF"/>    
         <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelHeaderStyle}" Content="FMA"/>   
-        <Button Grid.Row="1" Grid.Column="2" Style="{StaticResource ButtonHeaderStyle}" Content="Update Day Spending"/>
+        <Button Grid.Row="1" Grid.Column="2" Style="{StaticResource ButtonHeaderStyle}" Content="Update Day Spending" Click="OpenDaySpendingUpdateWindow_OnClick"/>
         <!-- TOP LEFT -->
         <uc:BalanceUc Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" />
         <!-- Top RIGHT -->
