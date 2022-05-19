@@ -21,7 +21,7 @@ namespace MoneyManagement
     /// </summary>
     public partial class MainWindow : Window
     {
-        public WindowViewModel Model { get; } = new();
+        private WindowViewModel Model { get; } = new();
         public MainWindow()
         {
             InitializeComponent();

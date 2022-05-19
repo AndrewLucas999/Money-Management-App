@@ -8,7 +8,8 @@ public class DaySpending
         30.1
     };
 
-    public double TotalAmountSpentToday { get; set; } = ListOfDaySpending.Sum(Convert.ToDouble);
+    public double TotalAmountSpentToday { get; set; } = 0;
+    // public double TotalAmountSpentToday { get; set; } = ListOfDaySpending.Sum(Convert.ToDouble);
 
-    
+
 }

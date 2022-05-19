@@ -5,6 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:MoneyManagement"
         mc:Ignorable="d"
+        Loaded="DaySpendingUpdate_OnLoaded"
         Title="DaySpendingUpdate" Height="300" Width="200">
     <Window.Resources>
         <Style x:Key = "LabelHeaderStyle" TargetType="Label">

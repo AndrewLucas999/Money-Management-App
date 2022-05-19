@@ -1,16 +1,22 @@
-﻿namespace InternalLibrary.View_Model;
+﻿using System.ComponentModel;
+using InternalLibrary.ObservableObjectVm;
 
-public class MathsViewModel
+namespace InternalLibrary.View_Model;
+
+public class MathsViewModel : ObserverObject
 {
     public Maths Maths { get; } = new ();
-    public double DaySpending
-    {
-        get => Maths.DaySpending.TotalAmountSpentToday;
-        set
-        {
-            Maths.DaySpending.TotalAmountSpentToday = value;  
-        } 
-    }
+
+    public double DaySpending => Maths.DaySpending.TotalAmountSpentToday;
+    // public double DaySpending
+    // {
+    //     get => Maths.DaySpending.TotalAmountSpentToday;
+    //     set
+    //     {
+    //         Maths.DaySpending.TotalAmountSpentToday = value;
+    //         RaisePropertyChanged("DaySpending");
+    //     } 
+    // }
 
     public double Cash => Maths.Cash.NewBalance;
     public double AmountToSave => Maths.MoneyAllowance.AmountToSave;
@@ -18,6 +24,7 @@ public class MathsViewModel
     {
         Maths.Initalise();
         Maths.ResetDaySpent();
+        RaiseAllPropertiesChanged();
     }
     
 

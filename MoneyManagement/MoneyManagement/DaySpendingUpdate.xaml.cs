@@ -3,6 +3,7 @@ using System.Reflection;
 using System.Windows;
 using InternalLibrary.View_Model;
 using log4net;
+using MoneyManagement.UC;
 
 namespace MoneyManagement;
 
@@ -22,8 +23,20 @@ public partial class DaySpendingUpdate : Window
 
     private void SaveAmountSpent_OnClick(object sender, RoutedEventArgs e)
     {
-        Model.MathsViewModel.DaySpending = Convert.ToDouble(DayAmountSpent.Text);
+        MainWindow mainWindow = (MainWindow)this.DataContext;
+        
+        DaySpendingUc daySpending = (DaySpendingUc)this.DataContext;
+        
+        var amountSpent = DayAmountSpent.Text;
+        daySpending.DaySpendingLabel.Content = amountSpent;
+        this.Close();
         Log.Debug("Assigned");
         
+    }
+
+    private void DaySpendingUpdate_OnLoaded(object sender, RoutedEventArgs e)
+    {
+        DaySpendingUc daySpendingUc = new DaySpendingUc();
+        daySpendingUc.DataContext = this;
     }
 }
