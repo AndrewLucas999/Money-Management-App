@@ -15,25 +15,26 @@ public partial class DaySpendingUpdate : Window
         LogManager.GetLogger(MethodBase.GetCurrentMethod()?.DeclaringType);
 
     #endregion
-    public WindowViewModel Model { get; set; } = new();
+    
+    
     public DaySpendingUpdate()
     {
         InitializeComponent();
+        
     }
-
+    
+    
     private void SaveAmountSpent_OnClick(object sender, RoutedEventArgs e)
     {
-        MainWindow mainWindow = (MainWindow)this.DataContext;
-        
-        DaySpendingUc daySpending = (DaySpendingUc)this.DataContext;
-        
-        var amountSpent = DayAmountSpent.Text;
-        daySpending.DaySpendingLabel.Content = amountSpent;
-        this.Close();
-        Log.Debug("Assigned");
-        
+        // DaySpendingUc daySpendingUc = new DaySpendingUc();
+        // Model.MathsViewModel.DaySpending = Convert.ToDouble(DayAmountSpent.Text);
+        // daySpendingUc.DaySpendingLabel.Content = Model.MathsViewModel.DaySpending;
+        // Log.Debug("Assigned");
+        //
     }
 
+    
+        
     private void DaySpendingUpdate_OnLoaded(object sender, RoutedEventArgs e)
     {
         DaySpendingUc daySpendingUc = new DaySpendingUc();

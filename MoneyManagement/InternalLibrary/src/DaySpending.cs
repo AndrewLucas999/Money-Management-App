@@ -10,6 +10,12 @@ public class DaySpending
 
     public double TotalAmountSpentToday { get; set; } = 0;
     // public double TotalAmountSpentToday { get; set; } = ListOfDaySpending.Sum(Convert.ToDouble);
-
+    public double SinglePurchasePrice { get; set; } 
+    public void AddIndividualAmount(string text)
+    {
+        var singlePrice = Convert.ToDouble(text);
+        SinglePurchasePrice = singlePrice;
+        TotalAmountSpentToday = TotalAmountSpentToday + SinglePurchasePrice;
+    }
 
 }

@@ -23,18 +23,26 @@
             <Setter Property="Foreground" Value="#63AEFF"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,0,0,5"></Setter>
         </Style>
         <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="Width" Value="200"/>
             <Setter Property="Height" Value="30"/>
+        </Style>
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="5,7,7,5"/>
+            <Setter Property="FontSize" Value="15"/>
         </Style>
     </UserControl.Resources>
     <Grid>
         <Border Style="{StaticResource BorderStyle}">
             <StackPanel VerticalAlignment="Center">
                 <Label Style="{StaticResource LabelStyle}" Content="Current Day Spending"></Label>
-                <Label Style = "{StaticResource LabelStyle}" Name="DaySpendingLabel" Content = "{Binding Path = MathsViewModel.DaySpending}"/>
-                <Button Style="{StaticResource ButtonStyle}" Content="Update Total Spent for Today"></Button>
+                <Label Style = "{StaticResource LabelStyle}" Name="DaySpendingLabel" Content = "{Binding Path = MathsViewModel.TotalDaySpending}"/>
+                <TextBox Style="{StaticResource TextBoxStyle}" Name="SinglePurchaseText" Text="{Binding Path = MathsViewModel.SinglePurchase, Mode=OneWay}"/>
+                <Button Style="{StaticResource ButtonStyle}" Click="UpdateDaySpentAmount_OnClick" Content="Update Total Spent for Today"></Button>
             </StackPanel>
         </Border>
     </Grid>

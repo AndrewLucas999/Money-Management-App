@@ -7,7 +7,9 @@ public class MathsViewModel : ObserverObject
 {
     public Maths Maths { get; } = new ();
 
-    public double DaySpending => Maths.DaySpending.TotalAmountSpentToday;
+    public double TotalDaySpending => Maths.DaySpending.TotalAmountSpentToday;
+
+    public double SinglePurchase => Maths.DaySpending.SinglePurchasePrice;
     // public double DaySpending
     // {
     //     get => Maths.DaySpending.TotalAmountSpentToday;
